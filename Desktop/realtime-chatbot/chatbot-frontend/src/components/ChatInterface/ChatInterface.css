@@ -1,0 +1,81 @@
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 500px; /* Example height */
+  width: 400px; /* Example width */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.message-list {
+  flex-grow: 1; /* Takes up all available space */
+  overflow-y: auto; /* Enables scrolling for messages */
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.message-text{
+    text-align: left;
+}
+
+.message-bubble {
+  padding: 8px 12px;
+  border-radius: 18px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+/* Styling for messages sent by the 'user' */
+.message-bubble.user {
+  background-color: #002455a1;
+  color: white;
+  margin-left: auto; /* Pushes the bubble to the right */
+  border-bottom-right-radius: 4px;
+}
+
+/* Styling for messages sent by others or system */
+.message-bubble.other, .message-bubble.system {
+  background-color: #e9e9eb;
+  color: #333;
+  margin-right: auto; /* Keeps the bubble on the left */
+  border-bottom-left-radius: 4px;
+}
+
+.message-time {
+  font-size: 0.7em;
+  opacity: 0.6;
+  margin-top: 2px;
+  text-align: right;
+}
+
+/* Input Form */
+.message-input-form {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.message-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.send-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #002455;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
